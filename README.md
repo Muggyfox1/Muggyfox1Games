@@ -1,5 +1,5 @@
 # Muggyfox1Games
- My website for posting public information about games and apps I make
+My website for posting public information about games and apps I make
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 
