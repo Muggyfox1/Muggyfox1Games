@@ -7,18 +7,54 @@
     background: linear-gradient(skyblue, blue, darkblue, rgb(0, 0, 46));
     color: white;
 
-    section#welcome{
+    section#welcome {
         flex-grow: 1;
-        
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        height: 80vh;
-        
-        h2{
+        height: 85vh;
+
+        h2 {
             margin: 0;
+        }
+    }
+
+    section#featured {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .featured-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            gap: 1em;
+
+            .featured-item {
+                width: 25%;
+
+                @media only screen and (max-width: 1000px) {
+                    width: 45%;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                }
+
+                background-color: aqua;
+                color: black;
+                padding: 1em;
+                border-radius: 15px;
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 }
