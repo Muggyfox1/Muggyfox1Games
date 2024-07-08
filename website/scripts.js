@@ -1,3 +1,5 @@
+let isNavOpen = false;
+
 document.addEventListener('DOMContentLoaded', () => {
     loadPage('home.html');
 });
@@ -9,6 +11,13 @@ document.addEventListener('scroll', function () {
     } else {
         header.classList.remove('scrolled');
     }
+});
+
+
+document.getElementById('hamburger').addEventListener('click', function () {
+    const navLinks = document.getElementById('nav-links');
+    isNavOpen = !isNavOpen;
+    navLinks.classList.toggle('open');
 });
 
 function loadPage(page) {

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muggyfox1 Games</title>
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
     <header>
-        <h1>Muggyfox1 Games</h1> <!-- TODO: hide this until we scroll down a little -->
+        <h1>Muggyfox1 Games</h1>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
                 <li><a href="#" onclick="loadPage('home.html')">Home</a></li>
                 <li><a href="#" onclick="loadPage('games.html')">Games</a></li>
                 <li><a href="#" onclick="loadPage('about.html')">About</a></li>
@@ -24,12 +27,11 @@
     <main id="content">
         <!-- Content will be loaded here -->
     </main>
-
+    
     <footer>
         <p>&copy; 2024 Muggyfox1 Games. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>
 </body>
-
 </html>

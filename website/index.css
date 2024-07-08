@@ -9,8 +9,6 @@ body {
 
 header {
     display: flex;
-    gap: 2em;
-
     background-color: #008000; /* Green */
     color: white;
     padding: 10px 20px;
@@ -33,6 +31,7 @@ header h1 {
     scale: 0;
     width: 0;
     height: 0;
+    margin-right: 0;
     text-wrap: nowrap;
     transition: all 0.3s ease;
 }
@@ -40,6 +39,7 @@ header h1 {
 header.scrolled h1 {
     scale: 1;
     width: 9em;
+    margin-right: 1em;
     height: auto;
 }
 
@@ -89,10 +89,49 @@ footer {
     left: 0;
 }
 
-/* Responsive design */
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 2px 0;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        position: fixed;
+        top: 0;
+        gap: 0;
+        
+        width: 100vw;
+        background: #008000; /* Green */
+        
+        right: -100vw;
+        transition: right 0.3s ease;
+    }
+
+    nav ul.open {
+        right: 0;
+    }
+
+    nav ul li a{
+        display: block;
+        padding: 10px 0;
+        border-top: 1px solid black;
     }
 }
