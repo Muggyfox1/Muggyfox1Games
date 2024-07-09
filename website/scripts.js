@@ -1,5 +1,3 @@
-let isNavOpen = false;
-
 document.addEventListener('DOMContentLoaded', () => {
     loadPage('home.html');
 });
@@ -23,7 +21,6 @@ function loadPage(page) {
         })
         .catch(error => console.error('Error loading page:', error));
 }
-
 
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');

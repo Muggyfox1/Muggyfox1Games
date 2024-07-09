@@ -20,6 +20,10 @@ section {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h2, h3:first-child{
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    }
 }
 
 /* Header styles */
@@ -27,6 +31,7 @@ h2, h3, h4 {
     margin: 0;
     margin-bottom: 10px;
     color: #333;
+    text-align: center;
 }
 
 h2 {
