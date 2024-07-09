@@ -55,6 +55,7 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
+    z-index: 11;
 }
 
 nav li {
@@ -70,6 +71,21 @@ nav a {
 
 nav a:hover {
     color: #ff8c00; /* Orange */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+nav ul.open + .overlay {
+    display: block;
 }
 
 /* Main content styles */
