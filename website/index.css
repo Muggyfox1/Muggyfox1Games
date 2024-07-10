@@ -90,7 +90,7 @@ nav ul.open + .overlay {
 
 /* Main content styles */
 main {
-    padding: 80px 20px 20px; /* Add padding to compensate for fixed header */
+    padding: 30px 20px 20px; /* Add padding to compensate for fixed header */
 }
 
 /* Footer styles */
@@ -98,7 +98,6 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 20px;
     position: fixed;
     width: 100%;
     bottom: 0;
