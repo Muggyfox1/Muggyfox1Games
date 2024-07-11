@@ -16,8 +16,13 @@ function loadPage(page) {
         .then(response => response.text())
         .then(html => {
             document.getElementById('content').innerHTML = html;
-
+            
             //specific page things
+            if(page === "home.html"){
+                console.log("homepage things")
+                //fetch dev-log index
+                // fill out dev-log entries in #dev-log-list
+            }
         })
         .catch(error => console.error('Error loading page:', error));
 }
