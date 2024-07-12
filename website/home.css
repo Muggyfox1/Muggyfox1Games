@@ -104,3 +104,22 @@ h3 {
         flex: 1 1 100%;
     }
 }
+
+#dev-log-list li {
+    margin-bottom: 1em;
+    list-style-type: none;
+}
+
+#dev-log-list a {
+    color: #ff9800; /* Orange */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#dev-log-list a:hover {
+    text-decoration: underline;
+}
+
+#dev-log-list span {
+    color: #555;
+}

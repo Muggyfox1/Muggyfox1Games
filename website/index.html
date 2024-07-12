@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muggyfox1 Games</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header>
         <h1>Muggyfox1 Games</h1>
@@ -28,11 +30,16 @@
     <main id="content">
         <!-- Content will be loaded here -->
     </main>
-    
+
     <footer>
         <p>&copy; 2024 Muggyfox1 Games. All rights reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
+    <script type="module">
+        import { initalize, loadPage } from './scripts.js';
+        import { initHome } from './home.js';
+        initalize();
+        window.loadPage = loadPage;
+    </script>
 </body>
+
 </html>

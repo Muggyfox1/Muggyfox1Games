@@ -1,0 +1,59 @@
+<article>
+    <h1>Dynamic Dev Logs with JSON</h1>
+    <p><strong>Date:</strong> 7/12/2024</p>
+    <p>Welcome to the first dev log where we talk about how we dynamically load dev logs using JSON. This is a great way
+        to manage and display content without hardcoding everything into HTML files.</p>
+
+    <h2>Why Use JSON for Dev Logs?</h2>
+    <p>Using JSON to manage your dev logs provides several benefits:</p>
+    <ul>
+        <li><strong>Flexibility:</strong> You can easily add, update, or remove logs without altering the HTML
+            structure.</li>
+        <li><strong>Scalability:</strong> JSON files can handle a large number of entries efficiently.</li>
+        <li><strong>Separation of Concerns:</strong> It keeps your data separate from your presentation layer.</li>
+    </ul>
+
+    <h2>Implementation</h2>
+    <p>Here's a brief overview of how we implemented dynamic dev logs:</p>
+    <ol>
+        <li>Created a JSON file to store dev log entries.</li>
+        <li>Used JavaScript to fetch and parse the JSON data.</li>
+        <li>Dynamically generated HTML elements based on the JSON data and inserted them into the DOM.</li>
+    </ol>
+
+    <h2>Code Snippets</h2>
+    <p>Below are some key code snippets used in our implementation:</p>
+    <pre><code class="language-javascript">
+        fetch('dev-logs/dev-log-index.json')
+        .then(response => response.json())
+        .then(data => {
+            const devLogList = document.querySelector('ul#dev-log-list');
+            const maxIndex = Math.min(5, data.devLogs.length);
+
+            for (let index = 0; index < maxIndex; index++) {
+                const log = data.devLogs[index];
+                const listItem = document.createElement('li');
+
+                const link = document.createElement('a');
+                link.href = "#";
+                link.onclick = () => loadPage(`./dev-logs/${log.fileName}`);
+                link.textContent = log.title;
+
+                const dateSpan = document.createElement('span');
+                dateSpan.textContent = ` (${log.date})`;
+                dateSpan.style.marginLeft = '10px';
+                dateSpan.style.color = '#555';
+
+                listItem.appendChild(link);
+                listItem.appendChild(dateSpan);
+                devLogList.appendChild(listItem);
+            }
+        })
+        .catch(error => console.error('Error fetching dev logs:', error));
+    </code></pre>
+
+    <h2>Conclusion</h2>
+    <p>This method of managing dev logs not only streamlines the process but also makes it easier to maintain and scale
+        as your project grows. Stay tuned for more updates and tips in our upcoming dev logs!</p>
+</article>
+<link rel="stylesheet" href="/website/dev-logs/a.css">
