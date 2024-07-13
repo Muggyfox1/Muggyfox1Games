@@ -1,14 +1,9 @@
 {
     "devLogs": [
         {
-            "title": "a",
-            "fileName":"a.html",
-            "date": "7/10/2024"
-        },
-        {
-            "title": "b",
-            "fileName":"b.html",
-            "date": "7/10/2024"
+            "title": "How I learned to code",
+            "fileName":"how_i_learned_to_code.html",
+            "date": "update date once it's written"
         }
     ]
 }
