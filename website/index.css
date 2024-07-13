@@ -150,3 +150,49 @@ footer {
         border-top: 1px solid black;
     }
 }
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+article {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h2, h3:first-child{
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    }
+}
+
+/* Header styles */
+h2, h3, h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #008000; /* Green */
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ff8c00; /* Orange */
+}

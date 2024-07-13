@@ -1,3 +1,4 @@
+import { initDevLogs } from "./dev-logs.js";
 import { initHome } from "./home.js"
 
 export function loadPage(page) {
@@ -7,8 +8,13 @@ export function loadPage(page) {
             document.getElementById('content').innerHTML = html;
 
             //specific page things
-            if (page === "home.html") {
-                initHome();
+            switch (page) {
+                case "home.html":
+                    initHome();
+                    break;
+                case "dev-logs.html":
+                    initDevLogs();
+                    break;
             }
         })
         .catch(error => console.error('Error loading page:', error));
