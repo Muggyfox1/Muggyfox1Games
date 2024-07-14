@@ -9,7 +9,7 @@ export function initDevLogs(){
             const link = document.createElement('a');
             link.href = "#";
             link.onclick = () => {
-                loadPage(`./apps/${log.fileName}`)
+                loadPage(`./dev-logs/${log.fileName}`)
             }
             link.textContent = log.title;
 
