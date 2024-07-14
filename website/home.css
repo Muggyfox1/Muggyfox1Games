@@ -47,9 +47,10 @@
 }
 
 /* Contact styles */
-#contact div {
-    margin-top: 10px;
-    color: #008000; /* Green */
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Responsive design */
