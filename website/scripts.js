@@ -1,3 +1,4 @@
+import { initApps } from "./apps.js";
 import { initDevLogs } from "./dev-logs.js";
 import { initHome } from "./home.js"
 
@@ -15,6 +16,10 @@ export function loadPage(page) {
                 case "dev-logs.html":
                     initDevLogs();
                     break;
+                case "apps.html":
+                    initApps();
+                    break;
+
             }
         })
         .catch(error => console.error('Error loading page:', error));
