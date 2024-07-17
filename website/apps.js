@@ -2,30 +2,22 @@ export function initApps(){
     fetch('apps/apps-index.json')
     .then(response => response.json())
     .then(data => {
-        const devLogList = document.querySelector('.featured-items-container');
-        for (let app of data.apps) {
-            //TODO: figure this out.
-            //probably need to add a link to the app page
-            // or should we just link to the actualy store page?
-            // const link = document.createElement('a');
-            // link.href = "#";
-            // link.onclick = () => {
-            //     loadPage(`./apps/${app.fileName}`)
-            // }
-            // link.textContent = app.title;
+        let maxIndex = Math.min(5, data.apps.length);
 
-            const featuredItemDiv = document.createElement('div');
+        const devLogList = document.querySelector('.featured-items-container');
+        for (let index = 0; index < maxIndex; index++) {
+            let app = data.apps[index];
+
+            const featuredItemDiv = document.createElement('a');
+            featuredItemDiv.href = app.link;
             featuredItemDiv.classList.add('featured-item');
 
-            // Create the image div
-            const imageDiv = document.createElement('div');
-            imageDiv.textContent =  "image"; //imageText; //TODO: needs to be the featured image of the app.
-        
-            // Create the h4 element
+            const imageDiv = document.createElement('img');
+            imageDiv.src =  app.img;
+
             const titleH4 = document.createElement('h4');
             titleH4.textContent = app.title;
-        
-            // Append the image div and h4 to the outer div
+
             featuredItemDiv.appendChild(imageDiv);
             featuredItemDiv.appendChild(titleH4);
 
