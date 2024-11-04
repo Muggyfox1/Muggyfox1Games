@@ -1,4 +1,8 @@
 /* General styles */
+@property --orange{
+    color: #FF8C00
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -164,15 +168,6 @@ footer {
     }
 }
 
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
 article {
     max-width: 1200px;
     margin: auto;
@@ -224,7 +219,6 @@ h3 {
     margin: 0 10px;
     color: #FF8C00;
     /* Orange color */
-    text-decoration: none;
     font-size: 1.2em;
 }
 
